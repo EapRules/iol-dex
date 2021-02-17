@@ -47,7 +47,7 @@ function SpeciesList() {
                     <Species key={i} name={pokemon.name} url={pokemon.url} />
                 )}
             </CardDeck>
-            <Row className="justify-content-md-center py-5">
+            <Row className="justify-content-md-center text-center py-5">
                 <Col class="col-md-12 text-center">
                     <Pagination
                         prevPage={prevPage ? PrevPage : null}
