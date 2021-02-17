@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { NavBar } from "../../Components/NavBar/NavBar";
 import { Search } from "../../Components/Search/Search";
 import Container from 'react-bootstrap/Container';
@@ -13,8 +13,8 @@ const Home = () => {
  
 	return (
 		<Container fluid="s" style={theme}>
-			<NavBar  />
-			<Search />
+			<NavBar/>
+			<Search/>
 			{active ? <SpeciesList /> : <SearchSpecie />}
 		</Container>
 	);

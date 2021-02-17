@@ -1,12 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
 
-
-*{
+* {
   margin: 0;
-  font-family: 'Lexend Mega', sans-serif;
+  font-family: "Lexend Mega", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.logo{
-  width: 140px;
+.logo {
+  width: 125px;
+}
+.error-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.error-actions {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.error-actions .btn {
+  margin-right: 10px;
 }

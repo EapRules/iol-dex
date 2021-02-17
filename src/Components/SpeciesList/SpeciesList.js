@@ -4,6 +4,7 @@ import Species from '../Species/Species';
 import Pagination from "../Pagination/Pagination";
 import CardDeck from 'react-bootstrap/CardDeck';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { useTranslation } from "react-i18next";
 
@@ -39,20 +40,22 @@ function SpeciesList() {
     }
 
     return (
-            <Container>
-                <h1 className="my-5" >{t('Title')}</h1>
-                <CardDeck className="justify-content-md-center">
-                    {pokemonList.map((pokemon, i) => 
+        <Container>
+            <h1 className="my-5" >{t('Title')}</h1>
+            <CardDeck className="justify-content-md-center">
+                {pokemonList.map((pokemon, i) =>
                     <Species key={i} name={pokemon.name} url={pokemon.url} />
-                    )}
-                </CardDeck>
-                <Row className="row justify-content-md-center py-5">
-                <Pagination
-                    prevPage={prevPage ? PrevPage : null}
-                    nextPage={nextPage ? NextPage : null}
-                    pageNum={pageNum}/>
-                </Row>
-            </Container>
+                )}
+            </CardDeck>
+            <Row className="justify-content-md-center py-5">
+                <Col class="col-md-12 text-center">
+                    <Pagination
+                        prevPage={prevPage ? PrevPage : null}
+                        nextPage={nextPage ? NextPage : null}
+                        pageNum={pageNum} />
+                </Col>
+            </Row>
+        </Container>
     );
 }
 

@@ -10,13 +10,9 @@ export const SearchSpecie = () => {
 	const name = queryTerm.toLowerCase();
 	const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
 
-  const back = () =>{
-    setActive(true);
-  }
-
   return (
     <Container className="my-4">
-    <Button onClick={back}>back</Button>
+    <Button onClick={() => setActive(true)}>back</Button>
     <Species name={name} url={url} />
     </Container>
   )

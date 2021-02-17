@@ -7,16 +7,21 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { useTranslation } from "react-i18next";
 import Logo from '../../Assets/Images/logo.png'
 import { ThemeContext } from "../../Context/ThemeContext";
+import { PokeContext } from "../../Context/PokeContext";
 
 export const NavBar = () => {
 
   const { t, i18n } = useTranslation();
   const { theme, activeTheme, setActiveTheme } = useContext(ThemeContext);
-  
-  return (
+  const { setActive } = useContext(PokeContext);
 
+  return (
     <Navbar variant="dark" bg={theme.backgroundColor === "black" ? "dark" : "light"} className="mb-5">
-      <Navbar.Brand to="/"> <img src={Logo} alt="logo" className="logo"></img> </Navbar.Brand>
+      <Navbar.Brand >
+        <Button onClick={() => setActive(true)} variant="link">
+        <img src={Logo} alt="logo" className="logo"></img> 
+        </Button>
+        </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <ButtonGroup>
@@ -28,6 +33,5 @@ export const NavBar = () => {
         </ButtonGroup>
       </Navbar.Collapse>
     </Navbar>
-
   )
 }

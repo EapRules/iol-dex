@@ -7,5 +7,8 @@
     "NextPage":"Siguiente",
     "Search":"Busca un Pokemon",
     "SearchBtn":"Buscar",
-    "Title":"Pokemones"
+    "Title":"Pokemones",
+    "ErrorTitle":"Ohh no, Ocurrio algun error 😔",
+    "ErrorMsg":"Pero no te preocupes verifica el pokemon buscado y vuelve a intentar 😃",
+    "Error404":"Lo sentimos, se ha producido un error, no se ha encontrado la página solicitada!"
 }
